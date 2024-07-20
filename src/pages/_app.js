@@ -1,12 +1,15 @@
 import "@/styles/globals.css";
 import { AnimatePresence } from "framer-motion";
-import { Inter } from "next/font/google";
+import { Luxurious_Roman } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const luxurious_Roman = Luxurious_Roman({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 export default function App({ Component, pageProps, router }) {
   return (
-    <div className={inter.className}>
+    <div className={luxurious_Roman.className}>
       <AnimatePresence mode="wait">
         <Component key={router.route} {...pageProps} />
       </AnimatePresence>

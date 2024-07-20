@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.underline-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.underline-effect::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0.5px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.underline-effect:hover::after {
+  width: 100%;
+}
+
+@media screen and (min-width: 1280px) {
+  .underline-effect::after {
+    height: 0.05vw;
+  }
+}
