@@ -14,7 +14,7 @@ const links = [
 
 function Navbar() {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center w-[95%] mx-auto py-6 2xl:py-[2vw] gap-4 md:gap-0">
+    <div className="flex items-center justify-center w-[95%] mx-auto py-6 2xl:py-[2vw] gap-4 md:gap-0">
       <div className="flex-[1]">
         <Link href="/" className="capitalize font-bold text-2xl lg:text-[2vw]">
           shah.
