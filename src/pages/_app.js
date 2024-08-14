@@ -1,18 +1,19 @@
+import Footer from "@/Components/Footer";
+import Header from "@/Components/Header";
 import "@/styles/globals.css";
-import { AnimatePresence } from "framer-motion";
-import { Luxurious_Roman } from "next/font/google";
+import { Manrope } from "next/font/google";
 
-const luxurious_Roman = Luxurious_Roman({
+const manrope = Manrope({
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
 });
 
-export default function App({ Component, pageProps, router }) {
+export default function App({ Component, pageProps }) {
   return (
-    <div className={luxurious_Roman.className}>
-      <AnimatePresence mode="wait">
-        <Component key={router.route} {...pageProps} />
-      </AnimatePresence>
+    <div className={manrope.className}>
+      <Header />
+      <Component {...pageProps} />
+      <Footer />
     </div>
   );
 }

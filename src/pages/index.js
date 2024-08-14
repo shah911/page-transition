@@ -1,17 +1,50 @@
-import Navbar from "@/components/Navbar";
-import Transition from "@/components/Transition";
+import Hero from "@/Components/Hero";
+import ProjectSlider from "@/Components/ProjectSlider";
+import Section from "@/Components/Section";
+
+const data = [
+  {
+    link: "/",
+    img: "/Ancient Roman architecture.jpg",
+    title: "CASE Study 001",
+    mainTitle:
+      "MK: How can we fix non-functional elements, responsiveness, and user interaction issues?",
+    tags: ["UX Research", "Ui Design", "Prototyping"],
+  },
+  {
+    link: "/",
+    img: "/Ancient Roman architecture.jpg",
+    title: "CASE Study 001",
+    mainTitle:
+      "MK: How can we fix non-functional elements, responsiveness, and user interaction issues?",
+    tags: ["UX Research", "Ui Design", "Prototyping"],
+  },
+  {
+    link: "/",
+    img: "/Ancient Roman architecture.jpg",
+    title: "CASE Study 001",
+    mainTitle:
+      "MK: How can we fix non-functional elements, responsiveness, and user interaction issues?",
+    tags: ["UX Research", "Ui Design", "Prototyping"],
+  },
+  {
+    link: "/",
+    img: "/Ancient Roman architecture.jpg",
+    title: "CASE Study 001",
+    mainTitle:
+      "MK: How can we fix non-functional elements, responsiveness, and user interaction issues?",
+    tags: ["UX Research", "Ui Design", "Prototyping"],
+  },
+];
 
 export default function Home() {
   return (
-    <Transition>
-      <div className="fixed top-0 w-full">
-        <Navbar />
-      </div>
-      <main className="h-screen w-full flex items-center justify-center">
-        <span className="font-[500] uppercase text-[8vw] md:text-[5vw] leading-[100%] tracking-[0.5em]">
-          Home
-        </span>
-      </main>
-    </Transition>
+    <div>
+      <Hero />
+      <ProjectSlider />
+      {data.map((item, i) => (
+        <Section data={item} key={i} index={i} />
+      ))}
+    </div>
   );
 }
